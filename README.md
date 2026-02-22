@@ -7,7 +7,7 @@ This game allows users to select different difficulty levels, guess a secret num
 
 ## 🌐 Live Demo
 
-🔗 https://karansinh1818.github.io/Guessing-Game/  
+🔗 https://guessinggamekm.netlify.app/ 
 
 ---
 
