@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guessing Game!</h1>
+        <p>Guess the secret number and win!</p>
+
+        <!-- Difficulty Selection -->
+        <div id="difficultySection">
+            <h2>Select Difficulty?</h2>
+            <br/>
+            <button class="diff-btn" data-max="10">Easy (1-10)</button>
+            <button class="diff-btn" data-max="50">Medium (1-50)</button>
+            <button class="diff-btn" data-max="100">Hard (1-100)</button>
+        </div>
+
+        <!-- Game Area -->
+        <div id="gameArea" style="display:none;">
+            <p>Guess a number between 1 and <span id="maxNumber">10</span></p>
+            <input type="number" id="guessInput" placeholder="Enter your guess" min="1">
+            <button id="submitBtn">Submit Guessing No:</button>
+            <p id="message"></p>
+            <p>Attempts: <span id="attempts">0</span> | Best Score: <span id="bestScore">-</span></p>
+            <button id="playAgainBtn">Play Again!</button>
+            <button id="homeBtn">Change Difficulty</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

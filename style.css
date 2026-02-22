@@ -1,0 +1,183 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+body {
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================= */
+/* MAIN CONTAINER */
+/* ============================= */
+.container {
+    background: #f4f6f9;
+    padding: 60px 50px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ============================= */
+/* MAIN TITLE */
+/* ============================= */
+h1 {
+    color: blueviolet;
+    font-size: 44px;
+    margin-bottom: 20px;
+    white-space: nowrap;       /* Always single line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.3s ease;
+}
+
+h1:hover {
+    color: #2e7d32;
+    letter-spacing: 1px;
+}
+
+/* ============================= */
+/* PARAGRAPH TEXT */
+/* ============================= */
+.container p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: magenta;
+    white-space: nowrap;       /* Single line */
+}
+
+/* ============================= */
+/* MESSAGE (Correct / Wrong) */
+/* ============================= */
+#message {
+    font-weight: bold;
+    color: gold;
+    font-size: 24px;
+    margin-top: 15px;
+    white-space: nowrap;       /* Single line */
+    animation: popEffect 0.6s ease;
+    transition: transform 0.3s ease;
+}
+
+#message:hover {
+    transform: scale(1.08);
+}
+
+@keyframes popEffect {
+    0% { transform: scale(0.6); opacity: 0; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* ============================= */
+/* INPUT */
+/* ============================= */
+input {
+    padding: 12px;
+    width: 85%;
+    margin: 18px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46,125,50,0.3);
+}
+
+/* ============================= */
+/* BUTTON BASE STYLE */
+/* ============================= */
+button {
+    width: 220px;
+    height: 65px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
+
+/* ============================= */
+/* DIFFICULTY BUTTONS */
+/* ============================= */
+.diff-btn:nth-of-type(1) {
+    background: #2e7d32;   /* Easy */
+}
+
+.diff-btn:nth-of-type(2) {
+    background: #1565c0;   /* Medium */
+}
+
+.diff-btn:nth-of-type(3) {
+    background: #c62828;   /* Hard */
+}
+
+/* ============================= */
+/* GAME BUTTONS */
+/* ============================= */
+#submitBtn {
+    background: #2e7d32;
+}
+
+#playAgainBtn {
+    background: #c62828;
+}
+
+#homeBtn {
+    background: #2e7d32;
+}
+
+/* ============================= */
+/* DIFFICULTY HEADING */
+/* ============================= */
+#difficultySection h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: brown;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 32px;
+        white-space: normal;
+    }
+
+    .container p,
+    #message {
+        white-space: normal;
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
